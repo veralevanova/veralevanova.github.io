@@ -230,6 +230,27 @@ figcaption { font-size: 15px; color: var(--l-slate); margin-top: 12px; }
   background: linear-gradient(90deg, #0b1030 0%, #0c4a68 55%, #0c7e94 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .ribbon .strip { width: 100%; margin-top: 60px; }
 
+/* бегущая лента экранов */
+.marquee { position: relative; margin-top: 56px; padding: 10px 0 40px; overflow: hidden; }
+.marquee::before { content: ""; position: absolute; left: -5%; right: -5%; bottom: 0; height: 62%;
+  background: radial-gradient(ellipse at center, rgba(42, 165, 180, .22) 0%, rgba(42, 165, 180, 0) 70%); pointer-events: none; }
+.marquee__track { display: flex; width: max-content; animation: marquee 70s linear infinite; position: relative; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__group { display: flex; align-items: flex-start; }
+.marquee__group img { width: 236px; height: auto; flex: none; margin-right: -22px; }
+.marquee__group img:nth-child(even) { transform: translateY(28px); }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (max-width: 860px) {
+  .marquee { margin-top: 32px; }
+  .marquee__group img { width: 168px; margin-right: -16px; }
+  .marquee__track { animation-duration: 55s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee { overflow-x: auto; }
+  .marquee__track { animation: none; }
+  .marquee__group[aria-hidden="true"] { display: none; }
+}
+
 /* разделитель разделов */
 .divider { padding: 60px 0 !important; overflow: hidden; }
 .divider .progress { height: 4px; background: #dfe2e8; border-radius: 4px; position: relative; margin-bottom: 60px; }
