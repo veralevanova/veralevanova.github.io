@@ -320,9 +320,10 @@
         <span class="num">03.2</span>
         <h2>Как устроен <span class="mark">один шаг</span></h2>
         <p class="sub">На примере выбора гражданства.</p>
-        <figure class="wide-figure">
+        <figure class="wide-figure scroll-x">
           <img src="../assets/img/one-step.webp" width="2904" height="2300" alt="Веб-экран вопроса о гражданстве с пронумерованными элементами: прогресс, назад, вопрос, частые варианты, FAQ" loading="lazy">
         </figure>
+        <p class="swipe-hint">Экран можно листать вбок →</p>
         <ol class="annotations" style="list-style:none;padding:0">
           <li class="card"><span class="n">1</span><h3>Полоса прогресса</h3><p>Показывает, какая часть анкеты пройдена.</p></li>
           <li class="card"><span class="n">2</span><h3>Кнопка «Назад»</h3><p>Возвращает к предыдущему вопросу анкеты.</p></li>
@@ -341,7 +342,7 @@
         <img class="legend" src="../assets/img/legend.webp" width="1132" height="80" alt="Легенда: вопрос, ответ, результат, стоп, отложить" loading="lazy">
         <div class="branches">
           <img src="../assets/img/br-sponsor.webp" width="984" height="758" alt="Ветка «Спонсор»: цель визы → Declaration of Commitment → данные спонсора" loading="lazy">
-          <img class="span-2" src="../assets/img/br-passport.webp" width="1800" height="758" alt="Развилка «Доступ к паспорту»: нет — пол, дата рождения, имя, место рождения, паспорт; да — только диапазон возраста, дальше Onfido" loading="lazy">
+          <div class="span-2 scroll-x scroll-x--branch"><img src="../assets/img/br-passport.webp" width="1800" height="758" alt="Развилка «Доступ к паспорту»: нет — пол, дата рождения, имя, место рождения, паспорт; да — только диапазон возраста, дальше Onfido" loading="lazy"></div>
           <img src="../assets/img/br-second.webp" width="984" height="836" alt="Ветка «Второе гражданство»: есть второе гражданство? да → какое?" loading="lazy">
           <img src="../assets/img/br-surname.webp" width="984" height="836" alt="Ветка «Фамилия»: семейное положение married, divorced или widowed → меняли фамилию? да → девичья фамилия" loading="lazy">
           <img src="../assets/img/br-tax.webp" width="984" height="836" alt="Ветка «Налоги»: налоги в нескольких странах? да → в каких странах?" loading="lazy">
@@ -385,7 +386,7 @@
           <p>Кнопка «I confirm that I am not a US tax resident» остаётся неактивной. Fintiba не открывает счета налоговым резидентам США, поэтому для них флоу здесь заканчивается. Этот шаг видят все пользователи.</p>
           <p>Под формой — FAQ: почему это важно и можно ли открыть счёт при налоговых обязательствах в США.</p>
         </div>
-        <img src="../assets/img/us-stop.webp" width="1560" height="1560" alt="Экран «Are you taxable in the USA?»: один пункт не отмечен, кнопка неактивна" loading="lazy">
+        <div class="scroll-x scroll-x--branch"><img src="../assets/img/us-stop.webp" width="1560" height="1560" alt="Экран «Are you taxable in the USA?»: один пункт не отмечен, кнопка неактивна" loading="lazy"></div>
       </div>
     </section>
 
@@ -402,6 +403,7 @@
             <figure><img src="../assets/img/mob-4.webp" width="882" height="1472" alt="Экран выбора тарифа страховки карточками" loading="lazy"><figcaption><strong>Страховка</strong>Выбор тарифа карточками</figcaption></figure>
           </div>
         </div>
+        <p class="swipe-hint phones-hint">Листайте экраны вбок →</p>
       </div>
     </section>
 
@@ -416,6 +418,7 @@
             <figure><img src="../assets/img/final-2.webp" width="1080" height="1856" alt="Итоговый экран со списком следующих шагов" loading="lazy"><figcaption><strong>Итог онбординга</strong>Список следующих шагов: подтвердить личность, внести сумму, скачать документы</figcaption></figure>
           </div>
         </div>
+        <p class="swipe-hint phones-hint">Листайте экраны вбок →</p>
       </div>
     </section>
 
