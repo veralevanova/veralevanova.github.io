@@ -6,7 +6,7 @@
     if (!track || reduce.matches) return;
     var auto = 0, last = performance.now(), half = 0, visible = true;
     var SPEED = 28;          // px в секунду
-    var SCROLL_FACTOR = 0.6; // насколько лента сдвигается от прокрутки
+    var SCROLL_FACTOR = 0;   // прокрутка страницы на ленту не влияет
     function measure() { half = track.scrollWidth / 2; }
     measure();
     window.addEventListener('resize', measure);
