@@ -428,6 +428,24 @@ img[src$="us-stop.webp"] { border-radius: 40px; box-shadow: 0 24px 60px rgba(11,
 .phones figcaption { font-size: 16px; padding: 0 16px; }
 .phones .small { display: block; font-size: 14px; margin-top: 6px; }
 
+/* финал флоу — геометрия из макета Figma (контейнер 1200 px, сцена 1200 × 753) */
+.case section.final-sec { padding: 120px 0 122px; }
+.final-stage { position: relative; aspect-ratio: 1200 / 753; margin-top: 84px; margin-bottom: 140px; }
+.final-band { position: absolute; left: -4.1667%; width: 108.3333%; top: 13.28%; height: 84.99%; border-radius: 40px;
+  background: url("../img/final-band.webp") center / cover no-repeat, linear-gradient(117deg, #0a5a73, #0e8fa8 50%, #7fd9cf); }
+.final-fig { position: absolute; width: 27.9167%; margin: 0; }
+.final-fig--1 { left: 15%; top: 3.98%; }
+.final-fig--2 { left: 57.0833%; top: 0; }
+.final-fig img { width: 100%; filter: drop-shadow(0 30px 40px rgba(11, 16, 48, .22)); }
+.final-badge { position: absolute; left: -4.18%; top: -1.94%; width: 11.94%; aspect-ratio: 1; border-radius: 50%; z-index: 1;
+  display: grid; place-items: center; font-weight: 700; font-size: 16px; color: #fff;
+  background: linear-gradient(135deg, #0b5f7a, #3dbbc4); box-shadow: 0 6px 14px rgba(11, 95, 122, .3); }
+.final-fig figcaption { position: absolute; left: 5.97%; width: 89.55%; margin: 0; font-size: 16px; color: var(--l-slate); line-height: 1.5; }
+.final-fig--1 figcaption { top: calc(100% + 37px); }
+.final-fig--2 figcaption { top: calc(100% + 67px); }
+.final-fig figcaption strong { display: block; font-size: 20px; color: var(--l-navy); margin-bottom: 8px; font-weight: 700; }
+.final-fig .small { display: block; font-size: 14px; margin-top: 8px; }
+
 /* итоги */
 .results { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; margin-top: 44px; }
 .results .band img { border-radius: var(--radius-lg); width: 100%; height: 100%; object-fit: cover; }
@@ -485,6 +503,13 @@ img[src$="us-stop.webp"] { border-radius: 40px; box-shadow: 0 24px 60px rgba(11,
   .annotations { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .phones--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 40px; }
   .phones-band::before { display: none; }
+  .case section.final-sec { padding: 64px 0; }
+  .final-stage { aspect-ratio: auto; display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 40px -20px 0; padding: 30px 20px 10px; scrollbar-width: none; }
+  .final-stage::-webkit-scrollbar { display: none; }
+  .final-band { left: 0; width: 100%; top: 120px; height: 360px; border-radius: 28px; min-width: 760px; }
+  .final-fig, .final-fig--1, .final-fig--2 { position: relative; left: auto; top: auto; flex: 0 0 min(62%, 300px); scroll-snap-align: center; }
+  .final-fig figcaption, .final-fig--1 figcaption, .final-fig--2 figcaption { position: static; width: auto; margin-top: 18px; padding: 0 4px; }
+  .final-badge { width: 36px; left: -8px; top: -12px; }
   .results { grid-template-columns: minmax(0, 1fr); }
   .learnings { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .learnings .card--teal { grid-column: 1 / -1; }
