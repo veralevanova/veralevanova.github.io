@@ -367,12 +367,13 @@ figcaption { font-size: 15px; color: var(--l-slate); margin-top: 12px; }
 .pair .after img { border-radius: 12px; border: 1px solid var(--l-border); width: 214px; }
 
 /* один шаг */
-.annotations { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; margin-top: 32px; }
+.annotations { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; margin-top: 32px; position: relative; z-index: 1; }
 .annotations .card { padding: 22px; }
 .annotations .n { width: 30px; height: 30px; border-radius: 50%; background: #7fd9d6; color: var(--l-navy); display: grid; place-items: center; font-weight: 700; font-size: 14px; }
 .annotations h3 { font-size: 17px; margin: 18px 0 6px; }
 .annotations p { font-size: 14px; }
-.wide-figure { margin-top: 40px; }
+.wide-figure { margin-top: 44px; }
+.wide-figure img { border-radius: 24px; box-shadow: 0 41px 86px rgba(0, 0, 0, .45); }
 
 /* ветки */
 .legend { margin-top: 26px; width: 100%; max-width: 566px; }
