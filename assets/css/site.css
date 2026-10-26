@@ -237,20 +237,16 @@ figcaption { font-size: 15px; color: var(--l-slate); margin-top: 12px; }
 .marquee { position: relative; margin-top: 56px; padding: 10px 0 40px; overflow: hidden; }
 .marquee::before { content: ""; position: absolute; left: -5%; right: -5%; bottom: 0; height: 62%;
   background: radial-gradient(ellipse at center, rgba(42, 165, 180, .22) 0%, rgba(42, 165, 180, 0) 70%); pointer-events: none; }
-.marquee__track { display: flex; width: max-content; animation: marquee 70s linear infinite; position: relative; }
-.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__track { display: flex; width: max-content; position: relative; will-change: transform; }
 .marquee__group { display: flex; align-items: flex-start; }
-.marquee__group img { width: 236px; height: auto; flex: none; margin-right: -22px; }
+.marquee__group img { width: 236px; height: auto; flex: none; margin-right: -42px; }
 .marquee__group img:nth-child(even) { transform: translateY(28px); }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (max-width: 860px) {
   .marquee { margin-top: 32px; }
-  .marquee__group img { width: 168px; margin-right: -16px; }
-  .marquee__track { animation-duration: 55s; }
+  .marquee__group img { width: 168px; margin-right: -30px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .marquee { overflow-x: auto; }
-  .marquee__track { animation: none; }
   .marquee__group[aria-hidden="true"] { display: none; }
 }
 
@@ -280,17 +276,30 @@ figcaption { font-size: 15px; color: var(--l-slate); margin-top: 12px; }
 .about-case .card p { font-size: 17px; }
 .about-case .role p, .about-case .team p { color: var(--l-navy); margin-top: 12px; }
 
+.about-case .card.stat { background: var(--grad-teal); border: none; }
+.about-case .card.stat .big, .about-case .card.stat p { color: #fff !important; }
+.about-case .card.team { background: linear-gradient(135deg, #ffffff 0%, #ffffff 45%, #e3f3f5 100%); }
+
 /* объём работы */
 .scope { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; margin-top: 48px; padding: 0; list-style: none; }
-.scope-item p { font-size: 16px; color: var(--l-slate); margin-top: 22px; padding: 0 6px; }
+.scope-item p { font-size: 16px; color: var(--l-slate); padding: 0 6px; }
 .scope-card {
   position: relative; aspect-ratio: 4 / 5; border-radius: 28px; padding: 28px 26px;
   display: flex; flex-direction: column; background: #fff; border: 1px solid var(--l-border);
   box-shadow: 0 18px 40px rgba(11, 16, 48, .07); transition: transform .3s ease;
 }
-.scope-item:nth-child(odd) .scope-card { transform: rotate(-2.5deg); }
-.scope-item:nth-child(even) .scope-card { transform: rotate(2deg) translateY(14px); }
-.scope-item:hover .scope-card { transform: none; }
+.scope-card { transform: rotate(var(--r, 0deg)) translateY(var(--y, 0px)); }
+.scope-item:nth-child(1) { --r: -7deg; --y: 0px; }
+.scope-item:nth-child(2) { --r: 5deg;  --y: 30px; }
+.scope-item:nth-child(3) { --r: -5deg; --y: -5px; }
+.scope-item:nth-child(4) { --r: 6deg;  --y: 30px; }
+.scope-item:nth-child(5) { --r: -4deg; --y: 5px; }
+/* пунктирная линия с точками между карточками и подписями, как в макете */
+.scope-item { position: relative; }
+.scope-item p { position: relative; margin-top: 76px !important; }
+.scope-item p::before { content: ""; position: absolute; left: 50%; top: -44px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: var(--l-teal); }
+.scope-item:not(:last-child) p::after { content: ""; position: absolute; left: 50%; top: -38px; width: calc(100% + 24px); height: 26px;
+  border-bottom: 1.5px dashed #6cc3cc; border-radius: 0 0 50% 50% / 0 0 100% 100%; }
 .scope-card--teal { background: var(--grad-teal); border: none; color: #fff; }
 .scope-icon {
   width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center;
@@ -527,7 +536,10 @@ figcaption { font-size: 15px; color: var(--l-slate); margin-top: 12px; }
   .scope-icon { width: 56px; height: 56px; }
   .scope-icon svg { width: 26px; height: 26px; }
   .scope-card h3 { font-size: 17px; }
-  .scope-item p { font-size: 14px; margin-top: 16px; }
+  .scope-item p { font-size: 14px; margin-top: 24px !important; }
+  .scope-item p::before, .scope-item p::after { display: none; }
+  .scope-item { --y: 0px !important; }
+  .scope-card { transform: rotate(calc(var(--r) / 2)); }
   .about-case .screen { padding: 20px 20px 0; min-height: 260px; }
   .annotations { grid-template-columns: minmax(0, 1fr); }
   .phones--4, .phones--2 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
