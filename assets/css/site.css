@@ -393,9 +393,12 @@ img[src$="us-stop.webp"] { border-radius: 40px; box-shadow: 0 24px 60px rgba(11,
 
 /* обложка и лента: мягкие бирюзовые свечения из макета */
 .case-hero { overflow: hidden; }
-.case-hero::before, .case-hero::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; filter: blur(90px); z-index: 0; }
-.case-hero::before { width: 800px; height: 600px; right: -200px; top: -250px; background: rgba(95, 211, 198, .35); }
-.case-hero::after { width: 700px; height: 500px; left: -300px; top: 150px; background: rgba(14, 143, 168, .12); }
+/* свечения обложки из макета: размытые эллипсы #5fd3c6 35% (справа сверху) и #0e8fa8 12% (слева) */
+.theme-light .site-header { position: absolute; top: 0; left: 0; right: 0; }
+.case .case-hero { padding-top: 170px !important;
+  background:
+    radial-gradient(ellipse 600px 480px at calc(50% + 630px) 40px, rgba(95, 211, 198, .42) 0%, rgba(95, 211, 198, .35) 40%, rgba(95, 211, 198, .14) 72%, rgba(95, 211, 198, 0) 100%),
+    radial-gradient(ellipse 560px 440px at calc(50% - 670px) 400px, rgba(14, 143, 168, .12) 0%, rgba(14, 143, 168, .10) 40%, rgba(14, 143, 168, .04) 72%, rgba(14, 143, 168, 0) 100%); }
 .case-hero .container { position: relative; z-index: 1; }
 
 /* телефоны */
@@ -498,6 +501,7 @@ img[src$="us-stop.webp"] { border-radius: 40px; box-shadow: 0 24px 60px rgba(11,
   .about-grid .sticky { position: static; }
   .case-hero .grid { grid-template-columns: minmax(0, 1fr); }
   .case-hero .visual { max-width: 560px; margin: 0 auto; }
+  .case .case-hero { padding-top: 180px !important; }
   .goal { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .scope { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 48px; }
   .annotations { grid-template-columns: repeat(3, minmax(0, 1fr)); }
