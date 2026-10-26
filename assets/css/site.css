@@ -489,6 +489,12 @@ img[src$="us-stop.webp"] { border-radius: 40px; box-shadow: 0 24px 60px rgba(11,
 .cmp small { font-size: 14px; }
 .swipe-hint { display: none; font-size: 14px; color: var(--l-slate); margin-top: 10px; }
 
+/* обложка кейса: визуал справа в масштабе макета (800 px при контейнере 1200, левый край на 575 px) */
+@media (min-width: 1101px) {
+  .case-hero .grid { align-items: start; }
+  .case-hero .visual img { width: 137.93%; max-width: none; margin-left: -7.76%; margin-top: -9px; }
+}
+
 /* кнопка «Наверх» */
 .to-top {
   position: fixed; right: 32px; bottom: 32px; z-index: 50;
