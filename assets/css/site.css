@@ -687,7 +687,7 @@ img[src$="us-stop.webp"] { border-radius: 40px; box-shadow: 0 24px 60px rgba(11,
    ГЛАВНАЯ (обновление): шапка с телефонами, номера кейсов, «Обо мне» с фото
    ========================================================== */
 .hero { padding: 70px 0 90px; overflow: hidden; }
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 500px; gap: 20px; align-items: center; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 520px; gap: 20px; align-items: center; }
 .hero h1 { font-size: clamp(56px, 8.6vw, 124px); margin: 28px 0 40px; }
 .hero .lead { max-width: 560px; }
 .hero-visual { position: relative; width: 500px; height: 700px; }
@@ -756,3 +756,11 @@ img[src$="us-stop.webp"] { border-radius: 40px; box-shadow: 0 24px 60px rgba(11,
 @media (max-width: 560px) {
   .hero-visual { transform: scale(.68); transform-origin: top left; margin: 10px 0 -160px; }
 }
+/* телефоны в масштабе макета (1:1) */
+.hero-visual { width: 520px; height: 720px; }
+.hero-visual .orb-glow { left: 60px; top: 140px; width: 430px; height: 430px; }
+.hero-visual .ph--tr { left: -12px; top: 215px; width: 362px; }
+.hero-visual .ph--home { left: 172px; top: 52px; width: 385px; }
+.hero-chip--onb { left: 10px; top: 160px; }
+.hero-chip--ds { left: 20px; top: 610px; }
+@media (max-width: 560px) { .hero-visual { transform: scale(.64); margin: 10px 0 -250px; } }
