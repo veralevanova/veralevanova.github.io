@@ -400,3 +400,22 @@ body.theme-dark { background: #0a0d12; color: #fff; }
     -webkit-mask: linear-gradient(90deg, transparent, #000 140px, #000 calc(100% - 140px), transparent);
             mask: linear-gradient(90deg, transparent, #000 140px, #000 calc(100% - 140px), transparent); }
 }
+
+/* Обложка ДС: карточки цифр выровнены по правому краю навигации */
+.ds-stats-wrap { position: absolute; left: 0; right: 0; top: 121px; z-index: 2; pointer-events: none; }
+.ds-stats { display: grid; grid-template-columns: repeat(2, 200px); column-gap: 15px; justify-content: end; pointer-events: auto; }
+.ds-stats li { width: 200px; height: 132px; padding: 17px 19px; border-radius: 24px; background: rgba(18,20,28,.82); border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 12px 30px rgba(0,0,0,.35); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.ds-stats li:nth-child(1) { grid-column: 1; grid-row: 1; }
+.ds-stats li:nth-child(2) { grid-column: 2; grid-row: 1; margin-top: 30px; }
+.ds-stats li:nth-child(3) { grid-column: 1; grid-row: 2; margin-top: 20px; }
+.ds-stats li:nth-child(4) { grid-column: 2; grid-row: 2; margin-top: 20px; transform: translateY(30px); }
+.ds-stats b { display: block; font-size: 40px; font-weight: 700; line-height: 55px; color: #59d1e0; }
+.ds-stats span { display: block; font-size: 14px; font-weight: 700; line-height: 19px; color: #fff; margin-top: 4px; }
+.ds-stats small { display: block; font-size: 13px; line-height: 17px; color: rgba(255,255,255,.55); margin-top: 4px; }
+@media (max-width: 1100px) {
+  .ds-stats-wrap { position: static; padding: 20px 0 8px; }
+  .ds-stats { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+  .ds-stats li { width: auto; height: auto; margin: 0 !important; transform: none !important; grid-column: auto !important; grid-row: auto !important; }
+  .ds-stats b { font-size: 32px; line-height: 44px; }
+}
