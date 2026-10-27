@@ -9,7 +9,7 @@ body.theme-dark { background: #0a0d12; color: #fff; }
 /* ---------- шапка кейса ---------- */
 .dk-head { position: absolute; top: 0; left: 0; right: 0; z-index: 6; }
 .dk-head .container { display: flex; align-items: center; justify-content: space-between; gap: 12px 16px; flex-wrap: wrap; padding-top: 24px; }
-.dk-head .crumb { font-size: 14px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); text-decoration: none; white-space: nowrap; }
+.dk-head .crumb { font-size: 14px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #59d1e0; text-decoration: none; white-space: nowrap; }
 .dk-head .nav-pill { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); padding: 4px 30px; gap: 4px; }
 .dk-head .nav-pill a { color: #c2ccdb; font-size: 15px; font-weight: 600; opacity: 1; }
 .dk-head .nav-pill a:hover { color: #fff; }
@@ -499,4 +499,10 @@ body.theme-dark { background: #0a0d12; color: #fff; }
   .sw span { margin-top: 9px; line-height: 20px; }
   .sw--teal b { line-height: 36px; }
   .sw--teal span { margin-top: 0; }
+}
+/* ДС: тексты в навигации как в Figma — 14 Medium, поля 37px, интервалы 36px */
+@media (min-width: 1101px) {
+  .dk-head--ds .nav-pill { padding: 0 37px; gap: 36px; justify-content: center; align-items: center; }
+  .dk-head--ds .nav-pill a { padding: 0; font-size: 14px; font-weight: 500; line-height: 19px; background: none; }
+  .dk-head--ds .nav-pill a:hover { background: none; color: #fff; }
 }
