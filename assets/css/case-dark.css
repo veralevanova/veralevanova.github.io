@@ -507,3 +507,8 @@ body.theme-dark { background: #0a0d12; color: #fff; }
   .dk-head--ds .nav-pill a:hover { background: none; color: #fff; }
 }
 .ntable td.was-tok { text-decoration: line-through; }
+/* ДС обложка: карточки цифр тянутся к правому краю экрана, левый край — от навигации */
+@media (min-width: 1101px) {
+  .ds-stats { --cw: clamp(200px, calc(25vw - 160px), 340px); grid-template-columns: repeat(2, var(--cw)); margin-right: calc(320px - 2 * var(--cw) - 15px); }
+  .ds-stats li { width: var(--cw); }
+}
