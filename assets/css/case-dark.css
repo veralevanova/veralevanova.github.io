@@ -419,3 +419,10 @@ body.theme-dark { background: #0a0d12; color: #fff; }
   .ds-stats li { width: auto; height: auto; margin: 0 !important; transform: none !important; grid-column: auto !important; grid-row: auto !important; }
   .ds-stats b { font-size: 32px; line-height: 44px; }
 }
+
+/* ДС: навигация и карточки цифр — как в Figma (пилюля 326×49, карточки от её левого края) */
+@media (min-width: 1101px) {
+  .dk-head--ds .nav-pill { width: 326px; height: 49px; padding: 0 16px; justify-content: space-between; }
+  .dk-head--ds .nav-pill a { padding: 6px 8px; }
+  .ds-stats { margin-right: -95px; }
+}
