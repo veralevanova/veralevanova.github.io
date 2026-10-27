@@ -824,3 +824,17 @@ img[src$="us-stop.webp"] { border-radius: 40px; box-shadow: 0 24px 60px rgba(11,
 .hero-visual.is-tilt:hover .ph--home { transform: translateY(-6px); }
 @media (max-width: 560px) { .js-reveal .hero-visual[data-reveal] { transform: translateY(24px) scale(.64); } .js-reveal .hero-visual[data-reveal].is-in { transform: scale(.64); } }
 @media (prefers-reduced-motion: reduce) { .case-card .cover, .case-card .arr { transition: none; } }
+
+/* переключатель языка */
+.home .site-header .nav-pill { margin-left: auto; }
+.lang-switch {
+  text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: .06em;
+  padding: 11px 15px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); transition: background .2s;
+}
+.lang-switch:hover { background: var(--surface-2); }
+.ru-note { font-size: 13px; font-weight: 500; color: var(--muted); margin-left: 2px; }
+@media (max-width: 700px) {
+  .home .site-header .nav-pill { order: 4; margin-left: 0; }
+  .lang-switch { margin-left: auto; }
+}
