@@ -426,3 +426,77 @@ body.theme-dark { background: #0a0d12; color: #fff; }
   .dk-head--ds .nav-pill a { padding: 6px 8px; }
   .ds-stats { margin-right: -95px; }
 }
+
+/* фон секций: картинка задаётся inline (background-image), чтобы путь считался от страницы */
+.dsec::before { content: none; }
+.dsec { background-color: #0a0d12; background-repeat: no-repeat; background-position: center top; background-size: 1440px 100%; }
+@media (min-width: 1441px) { .dsec { background-size: 100% 100%; } }
+@media (max-width: 1100px) { .dsec { background-size: cover; } }
+
+/* тёмные кейсы: подписи и мелкие правки по Figma */
+.dtile p:not(.k) { font-size: 16px; line-height: 1.5; color: rgba(255,255,255,.65); margin-top: 16px; }
+.dtile .k { margin: 0; }
+.dk p.dnote { color: rgba(255,255,255,.5); }
+.btable th { text-transform: uppercase; }
+.dsh h2 .pl { box-shadow: 0 6px 14px rgba(77,115,255,.22); }
+
+/* блок контактов — как в Figma (584:9860) */
+@media (min-width: 861px) {
+  .theme-dark .contact-card { min-height: 367px; padding: 73px; border-radius: 40px; background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.14); }
+  .theme-dark .contact-card .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .14em; line-height: 18px; color: #59d1e0; margin: 0; }
+  .theme-dark .contact-card h2 { font-size: 80px; font-weight: 800; letter-spacing: -.04em; line-height: 86px; margin: 28px 0 28px; }
+  .theme-dark .contact-actions { gap: 14px; }
+  .theme-dark .btn { height: 59px; padding: 0 32px; font-size: 17px; font-weight: 700; }
+  .theme-dark .orb { right: 200px; }
+  .theme-dark .orb::before { inset: -40px; border-color: rgba(255,255,255,.16); }
+  .theme-dark .orb::after { inset: -90px; border-color: rgba(255,255,255,.13); }
+  .theme-dark .orb { outline: 1px solid rgba(255,255,255,.10); outline-offset: 149px; }
+  .theme-dark .orb svg { width: 86px; height: 86px; }
+  .theme-dark .orb svg path { stroke-width: 1.4; }
+  .theme-dark .contacts { padding: 60px 0 48px; }
+  .theme-dark .site-footer { padding-top: 40px; font-weight: 500; }
+}
+
+/* О проекте: свечения внутри визуала шагов (как в Figma) */
+.tr-about::after { content: ""; position: absolute; z-index: 0; pointer-events: none; top: 0; left: 50%; width: 1440px; height: 100%; margin-left: -720px;
+  background: radial-gradient(circle 260px at 1120px 310px, rgba(158,107,242,.38), rgba(158,107,242,0)),
+              radial-gradient(circle 210px at 910px 450px, rgba(89,209,224,.22), rgba(89,209,224,0)); }
+@media (max-width: 1100px) { .tr-about::after { display: none; } }
+
+/* Ключевые решения: карточки 441px как в Figma */
+@media (min-width: 1101px) {
+  .kcard { height: 441px; min-height: 0; padding-bottom: 0; }
+  .kcard .n { margin-top: 20px; line-height: 18px; font-size: 13px; }
+  .kcard h3 { margin-top: 4px; line-height: 23px; }
+  .kcard p { margin-top: 15px; line-height: 19px; }
+}
+
+/* Style Guide: размеры и отступы как в Figma (секция 2500px) */
+@media (min-width: 1101px) {
+  .tr-sg { height: 2500px !important; padding-bottom: 0; }
+  .tr-sg .flow { padding-top: 100px; }
+  .sg-title { line-height: 142px; margin-top: 20px; height: 142px; }
+  .tr-sg .lead { margin-top: 98px; }
+  .swatches { margin-top: 24px; height: 300px; }
+  .sgpanel { box-sizing: border-box; }
+  .sgpanel h3 { line-height: 30px; }
+  .sgpanel--el { height: 640px; margin-top: 60px; padding: 32px 40px 0; }
+  .sgpanel--el .sub { margin-top: 4px; line-height: 19px; }
+  .sgpanel--el img { margin-top: 6px; }
+  .tr-sg .sgpanel--btn { margin-top: 50px; height: 354px; padding: 32px 40px 0; border-radius: 36px; }
+  .tr-sg .sgpanel--btn .sub { margin-top: 6px; line-height: 19px; }
+  .tr-sg .sgpanel--btn .scroll img { margin: 13px 0 0 -10px; width: calc(100% + 20px); max-width: none; }
+  .tr-sg .sgpanel--btn + .sgpanel--btn { margin-top: 40px !important; height: 456px; }
+  .inputs { margin-top: 23px; row-gap: 41px; column-gap: 20px; }
+  .inputs figcaption { margin-top: 10px; line-height: 19px; }
+}
+@media (min-width: 1101px) {
+  .sw { padding-bottom: 16px; }
+  .sw--teal { transform-origin: top left; }
+}
+@media (min-width: 1101px) {
+  .sw b { line-height: 27px; }
+  .sw span { margin-top: 9px; line-height: 20px; }
+  .sw--teal b { line-height: 36px; }
+  .sw--teal span { margin-top: 0; }
+}
