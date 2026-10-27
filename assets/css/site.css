@@ -681,3 +681,4 @@ img[src$="us-stop.webp"] { border-radius: 40px; box-shadow: 0 24px 60px rgba(11,
   .case-end__grid::-webkit-scrollbar { display: none; }
   .case-end__grid li { flex: 0 0 84%; scroll-snap-align: start; }
 }
+.info-card .about-me { margin-top: 14px; color: var(--muted); font-size: 18px; line-height: 1.6; }
