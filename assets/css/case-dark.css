@@ -388,3 +388,15 @@ body.theme-dark { background: #0a0d12; color: #fff; }
   .who .r { padding: 22px 0; }
   .built .col { min-height: 0; }
 }
+
+/* ---------- широкие экраны (>1440): фон и обложки на всю ширину ---------- */
+.dsec::before { -webkit-mask: none; mask: none; }
+@media (min-width: 1441px) {
+  .dsec::before { background-size: 100% 100%; }
+  .dk-hero .hero-wrap { width: 100%; height: auto; left: 0; margin-left: 0; }
+  .dk-hero .hero-img { width: 100%; height: auto; }
+  .dk-hero .byline { top: auto; bottom: 1.6%; }
+  .tr-main img[src$="main.webp"], .final-bg {
+    -webkit-mask: linear-gradient(90deg, transparent, #000 140px, #000 calc(100% - 140px), transparent);
+            mask: linear-gradient(90deg, transparent, #000 140px, #000 calc(100% - 140px), transparent); }
+}
