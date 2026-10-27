@@ -506,3 +506,4 @@ body.theme-dark { background: #0a0d12; color: #fff; }
   .dk-head--ds .nav-pill a { padding: 0; font-size: 14px; font-weight: 500; line-height: 19px; background: none; }
   .dk-head--ds .nav-pill a:hover { background: none; color: #fff; }
 }
+.ntable td.was-tok { text-decoration: line-through; }
