@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=1793110050">
+  <link rel="stylesheet" href="assets/css/site.css?v=1793200001">
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержимому</a>
@@ -31,10 +31,19 @@
 
   <main id="main">
     <section class="hero">
-      <div class="container">
-        <p class="eyebrow">UI/UX портфолио</p>
-        <h1>Вера<br>Леванова</h1>
-        <p class="lead">UI/UX-дизайнер из Минска. Проектировала банковский продукт Fintiba для веба и мобильного приложения.</p>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">UI/UX портфолио</p>
+          <h1>Вера<br>Леванова</h1>
+          <p class="lead">UX/UI-дизайнер из Минска. Проектировала банковский продукт Fintiba для веба и мобильного приложения: переводы, онбординг и дизайн-систему.</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orb-glow"></div>
+          <img class="ph ph--tr" src="assets/img/hero-phone-tr.webp" width="362" height="563" alt="">
+          <img class="ph ph--home" src="assets/img/hero-phone-home.webp" width="385" height="642" alt="">
+          <span class="hero-chip hero-chip--onb"><i></i>Онбординг</span>
+          <span class="hero-chip hero-chip--ds"><i></i>Дизайн-система</span>
+        </div>
       </div>
     </section>
 
@@ -45,7 +54,8 @@
 
         <div class="cases-grid">
           <a class="case-card" href="cases/transfers.html">
-            <img class="cover" src="assets/img/cover-transfers.webp?v=1793110050" width="1156" height="800" alt="Обложка кейса: экран нового перевода в мобильном приложении Fintiba" loading="lazy">
+            <span class="case-num">01</span>
+            <img class="cover" src="assets/img/cover-transfers.webp?v=1793200001" width="1156" height="800" alt="Обложка кейса: экран нового перевода в мобильном приложении Fintiba" loading="lazy">
             <div class="body">
               <div class="tags"><span class="tag">Web</span><span class="tag">Mobile</span><span class="tag">UI/UX</span></div>
               <h3>Fintiba: банковские переводы</h3>
@@ -55,17 +65,19 @@
           </a>
 
           <a class="case-card" href="cases/design-system.html">
-            <img class="cover" src="assets/img/cover-ds.webp?v=1793110050" width="1156" height="800" alt="Обложка кейса: дизайн-система Fintiba, компоненты и цифры" loading="lazy">
+            <span class="case-num">02</span>
+            <img class="cover" src="assets/img/cover-ds.webp?v=1793200001" width="1156" height="800" alt="Обложка кейса: дизайн-система Fintiba, компоненты и цифры" loading="lazy">
             <div class="body">
               <div class="tags"><span class="tag">Design System</span><span class="tag">Figma</span><span class="tag">Atomic</span></div>
-              <h3>Дизайн-система</h3>
+              <h3>Дизайн-система Fintiba</h3>
               <p>Единая основа интерфейсов банковского продукта: токены, 150 компонентов и 944 варианта, правила для bottom sheet и модальных окон.</p>
               <span class="link-arrow">Смотреть кейс →</span>
             </div>
           </a>
 
           <a class="case-card case-card--wide" href="cases/onboarding.html">
-            <img class="cover" src="assets/img/cover-onb.webp?v=1793110050" width="1156" height="800" alt="Обложка кейса: редизайн онбординга, экраны анкеты в телефоне" loading="lazy">
+            <span class="case-num">03</span>
+            <img class="cover" src="assets/img/cover-onb.webp?v=1793200001" width="1156" height="800" alt="Обложка кейса: редизайн онбординга, экраны анкеты в телефоне" loading="lazy">
             <div class="body">
               <div class="tags"><span class="tag">Онбординг</span><span class="tag">Web + Mobile</span><span class="tag">UI/UX</span></div>
               <h3>Онбординг Fintiba</h3>
@@ -79,28 +91,32 @@
 
     <section class="section" id="about">
       <div class="container about-grid">
-        <div class="sticky">
+        <div class="about-left">
           <p class="eyebrow">Обо мне</p>
-          <h2 class="section-title">Опыт и навыки</h2>
+          <h2 class="section-title">Опыт и<br>навыки</h2>
+          <p class="about-intro">UX/UI-дизайнер из Минска. Работала над банковским продуктом Fintiba: исследования, онбординг, интерфейсы для веба и приложения и дизайн-система.</p>
+          <dl class="facts">
+            <div><dt>Город</dt><dd>Минск, Беларусь</dd></div>
+            <div><dt>Опыт</dt><dd>2+ года, банковский продукт</dd></div>
+            <div><dt>Платформы</dt><dd>Web и приложения</dd></div>
+            <div><dt>Команда</dt><dd>Международная, на английском</dd></div>
+          </dl>
+          <img class="portrait" src="assets/img/portrait.webp" width="680" height="840" alt="Вера Леванова" loading="lazy">
         </div>
 
         <div class="about-cards">
           <article class="info-card">
-            <h3>О себе</h3>
-            <p class="about-me">UI/UX-дизайнер, 2+ года в банковском продукте (веб и приложение). Проводила исследования пользователей, спроектировала обязательный онбординг и с нуля создала дизайн-систему.</p>
-          </article>
-
-          <article class="info-card">
             <h3>Fintiba GmbH · Франкфурт, Германия</h3>
             <p class="meta">UI/UX-дизайнер · янв 2024 — июнь 2026</p>
             <ul>
-              <li>Провела около 15 интервью с пользователями Fintiba и разобрала записи сессий, чтобы найти проблемы юзабилити; по итогам собрала персоны.</li>
-              <li>Спроектировала обязательный онбординг для открытия блокированного счёта (веб и приложение): один вопрос на экране, ветки для студента, спонсора и несовершеннолетнего, FAQ. Изучила 4 конкурентов и воронку PostHog с product owner; запуск в 2024, дорабатывала два года.</li>
-              <li>Проектировала веб и мобильные интерфейсы банковского продукта, включая переводы (Standard и Instant) и регулярные платежи; вместе с Senior-дизайнером дорабатывала флоу и UI.</li>
-              <li>Создала дизайн-систему продукта с нуля под руководством Senior-дизайнера, он давал обратную связь и согласовывал решения: 150 компонентов и 944 варианта, токены цвета, отступов и радиусов, атомарная структура и правила для bottom sheet и модальных окон.</li>
-              <li>Использовала AI-инструменты для поиска решений и прототипирования: Figma Make (дизайн и прототипы), Claude и Lovable (дизайн-концепты).</li>
-              <li>Работала в двух кросс-функциональных командах (банковской и Customer Interface) вместе с PM, tech lead, разработчиками и тестировщиками; ходила на стендапы и планирования, презентовала закрытые задачи стейкхолдерам на ревью спринтов.</li>
-              <li>Помогала тестировщику банковской команды: ручное тестирование, тест-кейсы, полное тестирование приложения и сайта.</li>
+              <li>Проводила пользовательские интервью (около 15) и анализировала записи сессий, чтобы выявлять проблемы юзабилити, потребности пользователей и болевые точки на этапе онбординга.</li>
+              <li>Создавала персоны пользователей на основе результатов исследований, чтобы обосновывать дизайн-решения и улучшать пользовательский опыт.</li>
+              <li>Проектировала и дорабатывала онбординг: обязательную анкету для открытия блокированного счёта с одним вопросом на экране, условными ветками и подсказками.</li>
+              <li>Проектировала интерфейсы для веб- и мобильных приложений в рамках одного продукта, включая переводы и регулярные платежи; дорабатывала сценарии и UI вместе с Senior-дизайнером.</li>
+              <li>Создала дизайн-систему продукта с нуля под руководством Senior-дизайнера, чтобы интерфейсы были единообразными: 150 компонентов и 944 варианта.</li>
+              <li>Использовала AI-инструменты для поиска дизайн-решений и оптимизации рабочего процесса.</li>
+              <li>Работала в двух кросс-функциональных командах (банковской и Customer Interface) с PM, tech lead, разработчиками и QA, на английском; стендапы, планирования, презентация задач на ревью спринтов.</li>
+              <li>Помогала QA банковской команды: ручное и полное тестирование приложения и сайта, тест-кейсы.</li>
             </ul>
           </article>
 
@@ -108,8 +124,7 @@
             <h3>Курсы графического дизайна · Минск</h3>
             <p class="meta">сен — ноя 2023</p>
             <ul>
-              <li>Типографика, теория цвета, композиция и визуальная иерархия.</li>
-              <li>Практика в Adobe Photoshop, учебные проекты.</li>
+              <li>Типографика, цвет, композиция, визуальная иерархия; практика в Adobe Photoshop.</li>
             </ul>
           </article>
 
@@ -121,9 +136,9 @@
           <article class="info-card">
             <h3>Навыки</h3>
             <div class="chips">
-              <span class="chip">Figma</span><span class="chip">UI/UX Design</span><span class="chip">Design Systems &amp; Tokens</span><span class="chip">Atomic Design</span>
-              <span class="chip">Developer Handoff</span><span class="chip">UX Research</span><span class="chip">User Interviews &amp; Personas</span>
-              <span class="chip">Onboarding Optimization</span><span class="chip">Competitor Analysis</span><span class="chip">User Flows</span><span class="chip">Manual Testing &amp; Test Cases</span><span class="chip">Jira</span><span class="chip">PostHog</span><span class="chip">Agile / Scrum</span>
+              <span class="chip">Figma</span><span class="chip">UI/UX-дизайн</span><span class="chip">Дизайн-системы и токены</span><span class="chip">Atomic Design</span>
+              <span class="chip">Передача в разработку</span><span class="chip">UX-исследования и анализ конкурентов</span><span class="chip">Интервью с пользователями и персоны</span>
+              <span class="chip">Пользовательские флоу и онбординг</span><span class="chip">Ручное тестирование, тест-кейсы</span><span class="chip">Jira, PostHog, Agile / Scrum</span>
             </div>
           </article>
 
@@ -134,6 +149,14 @@
               <span>English — B1 (ежедневное общение в команде)</span>
             </div>
           </article>
+
+          <div class="resume">
+            <p class="eyebrow">Резюме</p>
+            <div class="resume-actions">
+              <a class="btn btn--solid" href="assets/cv/CV_Levanova_RU.pdf" download>Скачать резюме (RU)</a>
+              <a class="btn" href="assets/cv/CV_Levanava_EN.pdf" download>Resume (EN)</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
