@@ -261,7 +261,7 @@
       if (r.bottom < -200 || r.top > vh + 200) return;
       var mid = r.top + r.height / 2 - vh / 2;
       // телефоны поднимаются на место, пока блок доезжает до центра экрана (вверх не уходят — снизу обрез)
-      el.style.transform = 'translate3d(0,' + Math.max(0, mid * parseFloat(el.getAttribute('data-par'))).toFixed(1) + 'px,0)';
+      el.style.transform = 'translateY(' + Math.round(Math.max(0, mid * parseFloat(el.getAttribute('data-par')))) + 'px)';
     });
     if (words.length) {
       var mr = man.getBoundingClientRect();
@@ -272,16 +272,6 @@
   }
   window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
   window.addEventListener('resize', onScroll); onScroll();
-
-  /* обложка: лёгкий наклон картинки за курсором */
-  var hv = document.querySelector('.lg-hero__visual'), hi = hv && hv.querySelector('img');
-  if (hv && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    hv.addEventListener('mousemove', function (e) {
-      var r = hv.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-      hi.style.transform = 'rotateY(' + (x * 6).toFixed(2) + 'deg) rotateX(' + (-y * 6).toFixed(2) + 'deg) scale(1.01)';
-    });
-    hv.addEventListener('mouseleave', function () { hi.style.transform = ''; });
-  }
 
   /* счётчики результата */
   $('.lg [data-count]').forEach(function (el) {
